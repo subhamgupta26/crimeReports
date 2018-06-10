@@ -132,7 +132,7 @@ this.iconFeatures.push(iconFeature2);
     console.log(this.map);
     console.log(this.map.getLayers());
 
-    console.log(this.map.getView().getZoom());
+    // console.log(this.map.getView().getZoom());
     
      })
   }
