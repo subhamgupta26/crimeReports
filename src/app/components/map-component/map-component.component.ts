@@ -54,6 +54,17 @@ iconStyle = new OlStyleStyle({
 });
 
   constructor(private fileService:FileServiceService) {
+    this.map=new OlMap({});
+    
+
+        this.map.on("moveend",()=>{
+    //  var lyr = this.map.getLayersByName('vectorLayer')[0];
+    //  this.map.removeLayer(lyr);
+    console.log('zoom called');
+    this.map.getLayers();
+}).subscribe(()=>{
+    console.log('zoom called');
+});
   }
 
   ngOnInit() {
@@ -116,6 +127,13 @@ this.iconFeatures.push(iconFeature2);
       view: this.view
     });
     this.addInteraction();
+
+
+    console.log(this.map);
+    console.log(this.map.getLayers());
+
+    console.log(this.map.getView().getZoom());
+    
      })
   }
 
