@@ -57,14 +57,14 @@ iconStyle = new OlStyleStyle({
     this.map=new OlMap({});
     
 
-        this.map.on("moveend",()=>{
-    //  var lyr = this.map.getLayersByName('vectorLayer')[0];
-    //  this.map.removeLayer(lyr);
-    console.log('zoom called');
-    this.map.getLayers();
-}).subscribe(()=>{
-    console.log('zoom called');
-});
+//         this.map.on("moveend",()=>{
+//     //  var lyr = this.map.getLayersByName('vectorLayer')[0];
+//     //  this.map.removeLayer(lyr);
+//     console.log('zoom called');
+//     this.map.getLayers();
+// }).subscribe(()=>{
+//     console.log('zoom called');
+// });
   }
 
   ngOnInit() {
